@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <script src="./final_index.js"></script>
+    <link href="./final_index.css" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <h3>코드캠프 회원가입</h3>
+        <div class="wrapper__upper">
+            <input class ="inputbox" type = "text" placeholder="이메일을 입력해주세요"><br><br>
+            <input class ="inputbox" type = "text" placeholder="이름을 입력하세요"><br><br>
+            <input class ="inputbox" type = "password" placeholder="비밀번호를 입력하세요"><br><br>
+            <input class ="inputbox" type = "password" placeholder="비밀번호를 다시 입력하세요"><br><br>
+        </div>
+        <div class="wrapper__middle">
+            <input class = "phonenumb" type="text" id="p1" oninput="changeFocus1(), checkValidation()" maxlength="3">-
+            <input class = "phonenumb" type="text" id="p2" oninput="changeFocus2(), checkValidation()" maxlength="4">-
+            <input class = "phonenumb" type="text" id="p3" oninput="checkValidation()" maxlength="4">
+
+        </div>
+        <div class="token__wrapper">
+            <div id="target">000000</div>
+            <button id = "send" onclick="auth()" disabled ="true">인증번호 전송</button>
+        </div>
+        <div class="token__wrapper">
+            <div id="timer">3:00</div>
+            <button id="finish" disabled="true">인증완료</button>
+        </div>
+        
+        <select class ="location" id = "location">
+            <option disabled = "true" selected="true">지역을 선택하세요</option>
+            <option>서울</option>
+            <option>대구</option>
+            <option>광주</option>
+            <option>영천</option>
+
+        </select>
+        <div class="gender__wrapper">
+            <div class="gender">
+                <input type="radio" name="gender">여성
+            </div>
+            <div class="gender">
+                <input type="radio" name="gender">남성
+            </div>
+        </div>
+        
+        <div class="divideline"></div>
+        <button id="register">가입하기</button>
+
+
+        
+    </div>
+</body>
+</html>
